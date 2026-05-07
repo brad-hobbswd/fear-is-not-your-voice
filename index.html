@@ -218,100 +218,48 @@ transform:translateY(-3px);
 box-shadow:0 12px 28px rgba(199,164,106,.25);
 }
 
-/* ===== CHAPTERS ===== */
+/* ===== FEATURED ===== */
 
-.chapters{
+.featured-preview{
 padding:120px 24px;
 background:#151515;
-}
-
-.chapters-header{
 text-align:center;
-margin-bottom:70px;
-}
-
-.chapters-header h2{
-font-family:'Cormorant Garamond',serif;
-font-size:clamp(3rem,6vw,4.8rem);
-margin-bottom:18px;
-}
-
-.chapters-header p{
-max-width:720px;
-margin:auto;
-color:#bdb6aa;
-}
-
-.chapter-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
-max-width:1300px;
-margin:auto;
-}
-
-.chapter-card{
-background:#1B1B1B;
-border-radius:26px;
-padding:38px 30px;
-border:1px solid rgba(255,255,255,.06);
-text-decoration:none;
-color:#F5F1E8;
-transition:.4s ease;
 position:relative;
 overflow:hidden;
-min-height:250px;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
 }
 
-.chapter-card::before{
+.featured-preview::before{
 content:"";
 position:absolute;
-inset:0;
-background:linear-gradient(
-180deg,
-rgba(199,164,106,.08),
-transparent 60%);
-opacity:0;
-transition:.4s ease;
+width:700px;
+height:700px;
+border-radius:50%;
+background:rgba(199,164,106,.05);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+filter:blur(40px);
 }
 
-.chapter-card:hover::before{
-opacity:1;
-}
-
-.chapter-card:hover{
-transform:translateY(-8px);
-border-color:rgba(199,164,106,.28);
-box-shadow:0 20px 40px rgba(0,0,0,.4);
-}
-
-.chapter-number{
-font-size:.8rem;
-letter-spacing:3px;
-text-transform:uppercase;
-color:#C7A46A;
-margin-bottom:20px;
+.featured-content{
+max-width:850px;
+margin:auto;
 position:relative;
 z-index:2;
 }
 
-.chapter-card h3{
+.featured-content h2{
 font-family:'Cormorant Garamond',serif;
-font-size:2rem;
-line-height:1.15;
-margin-bottom:20px;
-position:relative;
-z-index:2;
+font-size:clamp(3rem,7vw,5rem);
+line-height:1.1;
+margin-bottom:28px;
 }
 
-.chapter-card p{
-font-size:.96rem;
-color:#bcb5aa;
-position:relative;
-z-index:2;
+.featured-content p{
+font-size:1.08rem;
+color:#c7c0b5;
+max-width:700px;
+margin:auto auto 34px;
 }
 
 /* ===== QUOTE ===== */
@@ -404,11 +352,11 @@ font-size:1rem;
 padding:42px 26px;
 }
 
-.chapter-card{
-min-height:auto;
+.quote-section{
+padding:100px 24px;
 }
 
-.quote-section{
+.featured-preview{
 padding:100px 24px;
 }
 
@@ -442,7 +390,7 @@ Bradley Hobbs
 
 <div class="hero-buttons">
 
-<a href="#chapters" class="primary-btn">
+<a href="chapters.html" class="primary-btn">
 Begin Reading
 </a>
 
@@ -489,11 +437,11 @@ When Fear Becomes Familiar
 </h2>
 
 <p>
-Fear rarely enters loudly. More often, fear arrives quietly, blending into routine thoughts and familiar reactions. Over time, fear can begin to feel normal. Even responsible. Even spiritual.
+Fear rarely enters loudly. More often, fear arrives quietly, blending into routine thoughts and familiar reactions. Over time, fear can begin feeling normal. Even responsible. Even spiritual.
 </p>
 
 <p>
-Many believers reach a place where they still love Jesus, still believe the Word, and still affirm truth, yet live internally governed by anxiety.
+Many believers still love Jesus deeply while quietly living internally governed by anxiety, caution, and fear driven thinking.
 </p>
 
 <p>
@@ -508,162 +456,26 @@ Continue Reading
 
 </section>
 
-<!-- CHAPTERS -->
+<!-- FEATURED -->
 
-<section class="chapters" id="chapters">
+<section class="featured-preview">
 
-<div class="chapters-header">
+<div class="featured-content">
+
+<div class="section-label">
+Begin the Journey
+</div>
 
 <h2>
-Chapters
+Fear does not deserve the final word.
 </h2>
 
 <p>
-A journey from fear driven living into peace, clarity, trust, and the finished work of Jesus.
+Explore every chapter from introduction through closing prayer within a cinematic reading experience centered on healing, truth, peace, trust, and the voice of Jesus.
 </p>
 
-</div>
-
-<div class="chapter-grid">
-
-<a href="chapter-1.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 1
-</div>
-
-<h3>
-When Fear Becomes the Narrator of Your Inner Life
-</h3>
-
-</div>
-
-<p>
-Fear may speak, but fear does not get to explain your life.
-</p>
-
-</a>
-
-<a href="chapter-2.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 2
-</div>
-
-<h3>
-The Way Fear Uses Words to Undo What God Has Spoken
-</h3>
-
-</div>
-
-<p>
-Fear rehearses defeat while faith speaks agreement with God.
-</p>
-
-</a>
-
-<a href="chapter-3.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 3
-</div>
-
-<h3>
-When Fear Wears the Mask of Love
-</h3>
-
-</div>
-
-<p>
-Fear claims protection while quietly reducing intimacy.
-</p>
-
-</a>
-
-<a href="chapter-4.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 4
-</div>
-
-<h3>
-Correction Without Condemnation
-</h3>
-
-</div>
-
-<p>
-Jesus corrects from presence, not rejection.
-</p>
-
-</a>
-
-<a href="chapter-5.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 5
-</div>
-
-<h3>
-Storm Focus or Savior Focus
-</h3>
-
-</div>
-
-<p>
-Peace flows from focus, not from the absence of waves.
-</p>
-
-</a>
-
-<a href="chapter-6.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 6
-</div>
-
-<h3>
-Living From a Sound Mind Instead of a Fear Driven Mind
-</h3>
-
-</div>
-
-<p>
-Truth gains authority when fear loses agreement.
-</p>
-
-</a>
-
-<a href="chapter-7.html" class="chapter-card">
-
-<div>
-
-<div class="chapter-number">
-Chapter 7
-</div>
-
-<h3>
-Standing in What God Has Already Given
-</h3>
-
-</div>
-
-<p>
-Fear asks for more reassurance while faith stands in what Jesus already gave.
-</p>
-
+<a href="chapters.html" class="read-btn">
+Open Chapters
 </a>
 
 </div>
