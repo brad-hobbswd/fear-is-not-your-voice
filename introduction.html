@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Introduction | Fear Is Not Your Voice</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#111111;
+color:#F5F1E8;
+font-family:'Inter',sans-serif;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+/* ===== NAV ===== */
+
+.topbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 28px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(17,17,17,.78);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.05);
+z-index:1000;
+}
+
+.logo{
+font-family:'Cormorant Garamond',serif;
+font-size:1.5rem;
+font-weight:600;
+color:#F5F1E8;
+text-decoration:none;
+}
+
+.back-link{
+text-decoration:none;
+color:#C7A46A;
+font-size:.92rem;
+letter-spacing:2px;
+text-transform:uppercase;
+transition:.3s ease;
+}
+
+.back-link:hover{
+opacity:.75;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+padding:180px 24px 120px;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(rgba(17,17,17,.82),rgba(17,17,17,.96)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at center,
+rgba(199,164,106,.08),
+transparent 60%);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:850px;
+margin:auto;
+animation:fadeUp 1s ease;
+}
+
+.section-label{
+color:#C7A46A;
+font-size:.82rem;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:24px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3.5rem,9vw,6rem);
+line-height:1;
+margin-bottom:24px;
+}
+
+.hero-subtitle{
+font-size:1.1rem;
+color:#cfc7bb;
+max-width:680px;
+margin:auto;
+}
+
+/* ===== READING ===== */
+
+.reading-section{
+padding:100px 24px 140px;
+position:relative;
+}
+
+.reading-container{
+max-width:820px;
+margin:auto;
+}
+
+.reading-container p{
+font-size:1.1rem;
+color:#ddd7cd;
+margin-bottom:34px;
+}
+
+.reading-container p:first-of-type::first-letter{
+font-family:'Cormorant Garamond',serif;
+font-size:5rem;
+float:left;
+line-height:.8;
+padding-right:12px;
+padding-top:10px;
+color:#C7A46A;
+}
+
+.scripture{
+margin:70px 0;
+padding:50px 40px;
+border-radius:28px;
+background:#181818;
+border:1px solid rgba(255,255,255,.06);
+text-align:center;
+}
+
+.scripture-text{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2rem,5vw,3.2rem);
+line-height:1.3;
+margin-bottom:20px;
+}
+
+.scripture-ref{
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:.85rem;
+color:#C7A46A;
+}
+
+.highlight{
+color:#C7A46A;
+}
+
+.quote-line{
+font-family:'Cormorant Garamond',serif;
+font-size:2.2rem;
+line-height:1.35;
+margin:70px 0;
+padding-left:24px;
+border-left:2px solid rgba(199,164,106,.4);
+color:#F5F1E8;
+}
+
+/* ===== NAV BUTTONS ===== */
+
+.bottom-nav{
+margin-top:90px;
+display:flex;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.bottom-nav a{
+text-decoration:none;
+padding:15px 26px;
+border-radius:999px;
+transition:.35s ease;
+font-size:.95rem;
+}
+
+.home-btn{
+border:1px solid rgba(255,255,255,.08);
+color:#F5F1E8;
+background:#1A1A1A;
+}
+
+.home-btn:hover{
+background:#202020;
+transform:translateY(-3px);
+}
+
+.next-btn{
+background:#C7A46A;
+color:#111111;
+font-weight:600;
+}
+
+.next-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 30px rgba(199,164,106,.22);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+padding:70px 24px;
+border-top:1px solid rgba(255,255,255,.06);
+text-align:center;
+background:#111111;
+}
+
+.footer-text{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:16px;
+}
+
+.footer-copy{
+font-size:.9rem;
+color:#8f8a82;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.hero{
+padding:160px 22px 90px;
+}
+
+.hero-subtitle{
+font-size:1rem;
+}
+
+.reading-container p{
+font-size:1.02rem;
+}
+
+.scripture{
+padding:40px 24px;
+}
+
+.quote-line{
+font-size:1.8rem;
+padding-left:18px;
+}
+
+.bottom-nav{
+flex-direction:column;
+}
+
+.bottom-nav a{
+text-align:center;
+width:100%;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+<a href="index.html" class="logo">
+Fear Is Not Your Voice
+</a>
+
+<a href="index.html" class="back-link">
+← Home
+</a>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="section-label">
+Introduction
+</div>
+
+<h1>
+When Fear Becomes Familiar
+</h1>
+
+<p class="hero-subtitle">
+Fear rarely enters loudly. More often, fear arrives quietly until anxiety begins to feel normal, responsible, and even spiritual.
+</p>
+
+</div>
+
+</section>
+
+<!-- READING -->
+
+<section class="reading-section">
+
+<div class="reading-container">
+
+<p>
+Fear rarely enters loudly. More often, fear arrives quietly, blending into routine thoughts and familiar reactions. Over time, fear can begin to feel normal. Even responsible. Even spiritual.
+</p>
+
+<p>
+Many believers reach a place where they still love Jesus, still believe the Word, and still affirm truth, yet live internally governed by anxiety. They pray, but with tension. They worship, but guarded. They obey, but cautiously. Fear becomes the background noise of faith.
+</p>
+
+<p>
+Paul wrote to Timothy during a season when fear would have seemed reasonable. Timothy was young, leading under pressure, facing criticism, persecution, and responsibility beyond his natural strength.
+</p>
+
+<p>
+Paul did not shame him for feeling fear. Paul identified fear for what fear was and where fear did not come from.
+</p>
+
+<div class="scripture">
+
+<div class="scripture-text">
+“For God did not give us a spirit of fear, but He has given us a spirit of power and of love and of sound mind.”
+</div>
+
+<div class="scripture-ref">
+2 Timothy 1:7
+</div>
+
+</div>
+
+<p>
+This verse is not comfort language. This verse is spiritual alignment. Scripture reveals that fear has a source, and that source is not God.
+</p>
+
+<p>
+Scripture also reveals that what God gives replaces what fear tries to counterfeit.
+</p>
+
+<div class="quote-line">
+Fear may sound familiar.<br>
+Familiarity does not equal authority.
+</div>
+
+<p>
+Fear imitates wisdom while producing paralysis. Fear imitates caution while weakening trust. Fear imitates protection while quietly reducing intimacy with Jesus.
+</p>
+
+<p>
+The voice of Jesus carries peace even during correction. Fear carries urgency even during deception.
+</p>
+
+<p>
+This book is an invitation to unlearn fear’s voice and relearn the voice of Jesus.
+</p>
+
+<p>
+Power belongs to Jesus. Love belongs to Jesus. A sound mind belongs to Jesus. Every chapter ahead moves toward the same truth:
+</p>
+
+<div class="quote-line">
+Fear is not your voice.<br>
+Jesus is.
+</div>
+
+<!-- NAV -->
+
+<div class="bottom-nav">
+
+<a href="index.html" class="home-btn">
+Back Home
+</a>
+
+<a href="chapter-1.html" class="next-btn">
+Begin Chapter 1
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-text">
+Living From Power, Love, and a Sound Mind
+</div>
+
+<div class="footer-copy">
+© Bradley Hobbs
+</div>
+
+</footer>
+
+</body>
+</html>
