@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fear Is Not Your Voice | Bradley Hobbs</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#111111;
+color:#F5F1E8;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+line-height:1.8;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 24px;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(rgba(17,17,17,.82),rgba(17,17,17,.92)),
+url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop') center/cover;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at top,
+rgba(255,255,255,.08),
+transparent 55%);
+pointer-events:none;
+}
+
+.hero-content{
+max-width:900px;
+position:relative;
+z-index:2;
+animation:fadeUp 1.2s ease;
+}
+
+.hero-subtitle{
+font-size:.95rem;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#C7A46A;
+margin-bottom:24px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(4rem,10vw,7rem);
+font-weight:600;
+line-height:.95;
+margin-bottom:30px;
+}
+
+.hero-description{
+font-size:1.2rem;
+max-width:720px;
+margin:0 auto 28px;
+color:#d7d1c6;
+}
+
+.author{
+font-size:1rem;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#9e978c;
+margin-bottom:42px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.hero-buttons a{
+padding:15px 28px;
+border-radius:999px;
+text-decoration:none;
+font-size:.95rem;
+font-weight:500;
+transition:.35s ease;
+}
+
+.primary-btn{
+background:#C7A46A;
+color:#111111;
+}
+
+.primary-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(199,164,106,.28);
+}
+
+.secondary-btn{
+border:1px solid rgba(255,255,255,.18);
+color:#F5F1E8;
+backdrop-filter:blur(8px);
+background:rgba(255,255,255,.03);
+}
+
+.secondary-btn:hover{
+background:rgba(255,255,255,.08);
+transform:translateY(-3px);
+}
+
+/* ===== SCRIPTURE ===== */
+
+.scripture{
+padding:120px 24px;
+text-align:center;
+background:#171717;
+}
+
+.scripture-container{
+max-width:900px;
+margin:auto;
+}
+
+.scripture-text{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2rem,5vw,3.6rem);
+line-height:1.3;
+font-weight:500;
+margin-bottom:30px;
+color:#F5F1E8;
+}
+
+.scripture-ref{
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:.9rem;
+color:#C7A46A;
+}
+
+/* ===== INTRO ===== */
+
+.intro{
+padding:120px 24px;
+}
+
+.intro-card{
+max-width:900px;
+margin:auto;
+background:#1A1A1A;
+border:1px solid rgba(255,255,255,.06);
+border-radius:28px;
+padding:60px 40px;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.section-label{
+color:#C7A46A;
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:.8rem;
+margin-bottom:18px;
+}
+
+.intro-card h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(2.5rem,5vw,4rem);
+margin-bottom:26px;
+line-height:1.05;
+}
+
+.intro-card p{
+font-size:1.05rem;
+color:#d4cec4;
+margin-bottom:22px;
+}
+
+.read-btn{
+display:inline-block;
+margin-top:18px;
+padding:14px 26px;
+border-radius:999px;
+background:#C7A46A;
+color:#111111;
+text-decoration:none;
+font-weight:600;
+transition:.35s ease;
+}
+
+.read-btn:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 28px rgba(199,164,106,.25);
+}
+
+/* ===== CHAPTERS ===== */
+
+.chapters{
+padding:120px 24px;
+background:#151515;
+}
+
+.chapters-header{
+text-align:center;
+margin-bottom:70px;
+}
+
+.chapters-header h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3rem,6vw,4.8rem);
+margin-bottom:18px;
+}
+
+.chapters-header p{
+max-width:720px;
+margin:auto;
+color:#bdb6aa;
+}
+
+.chapter-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:28px;
+max-width:1300px;
+margin:auto;
+}
+
+.chapter-card{
+background:#1B1B1B;
+border-radius:26px;
+padding:38px 30px;
+border:1px solid rgba(255,255,255,.06);
+text-decoration:none;
+color:#F5F1E8;
+transition:.4s ease;
+position:relative;
+overflow:hidden;
+min-height:250px;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.chapter-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+180deg,
+rgba(199,164,106,.08),
+transparent 60%);
+opacity:0;
+transition:.4s ease;
+}
+
+.chapter-card:hover::before{
+opacity:1;
+}
+
+.chapter-card:hover{
+transform:translateY(-8px);
+border-color:rgba(199,164,106,.28);
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.chapter-number{
+font-size:.8rem;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#C7A46A;
+margin-bottom:20px;
+position:relative;
+z-index:2;
+}
+
+.chapter-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+line-height:1.15;
+margin-bottom:20px;
+position:relative;
+z-index:2;
+}
+
+.chapter-card p{
+font-size:.96rem;
+color:#bcb5aa;
+position:relative;
+z-index:2;
+}
+
+/* ===== QUOTE ===== */
+
+.quote-section{
+padding:140px 24px;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.quote-section::before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+border-radius:50%;
+background:rgba(199,164,106,.05);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+filter:blur(40px);
+}
+
+.quote-content{
+position:relative;
+z-index:2;
+max-width:900px;
+margin:auto;
+}
+
+.quote-content h2{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3rem,7vw,5rem);
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.quote-content p{
+font-size:1.15rem;
+color:#c7c0b5;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+padding:70px 24px;
+border-top:1px solid rgba(255,255,255,.06);
+text-align:center;
+background:#111111;
+}
+
+.footer-quote{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin-bottom:18px;
+}
+
+.footer-copy{
+font-size:.9rem;
+color:#8f8a82;
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.hero{
+padding:100px 20px;
+}
+
+.hero-description{
+font-size:1rem;
+}
+
+.intro-card{
+padding:42px 26px;
+}
+
+.chapter-card{
+min-height:auto;
+}
+
+.quote-section{
+padding:100px 24px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="hero-subtitle">
+Based on 2 Timothy 1:7
+</div>
+
+<h1>
+Fear Is Not Your Voice
+</h1>
+
+<p class="hero-description">
+Living from power, love, and a sound mind through the voice of Jesus instead of the language of fear.
+</p>
+
+<div class="author">
+Bradley Hobbs
+</div>
+
+<div class="hero-buttons">
+
+<a href="#chapters" class="primary-btn">
+Begin Reading
+</a>
+
+<a href="introduction.html" class="secondary-btn">
+Read Introduction
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SCRIPTURE -->
+
+<section class="scripture">
+
+<div class="scripture-container">
+
+<div class="scripture-text">
+“For God did not give us a spirit of fear, but He has given us a spirit of power and of love and of sound mind.”
+</div>
+
+<div class="scripture-ref">
+2 Timothy 1:7
+</div>
+
+</div>
+
+</section>
+
+<!-- INTRO -->
+
+<section class="intro">
+
+<div class="intro-card">
+
+<div class="section-label">
+Introduction
+</div>
+
+<h2>
+When Fear Becomes Familiar
+</h2>
+
+<p>
+Fear rarely enters loudly. More often, fear arrives quietly, blending into routine thoughts and familiar reactions. Over time, fear can begin to feel normal. Even responsible. Even spiritual.
+</p>
+
+<p>
+Many believers reach a place where they still love Jesus, still believe the Word, and still affirm truth, yet live internally governed by anxiety.
+</p>
+
+<p>
+This book invites readers to unlearn fear’s voice and relearn the voice of Jesus.
+</p>
+
+<a href="introduction.html" class="read-btn">
+Continue Reading
+</a>
+
+</div>
+
+</section>
+
+<!-- CHAPTERS -->
+
+<section class="chapters" id="chapters">
+
+<div class="chapters-header">
+
+<h2>
+Chapters
+</h2>
+
+<p>
+A journey from fear driven living into peace, clarity, trust, and the finished work of Jesus.
+</p>
+
+</div>
+
+<div class="chapter-grid">
+
+<a href="chapter-1.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 1
+</div>
+
+<h3>
+When Fear Becomes the Narrator of Your Inner Life
+</h3>
+
+</div>
+
+<p>
+Fear may speak, but fear does not get to explain your life.
+</p>
+
+</a>
+
+<a href="chapter-2.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 2
+</div>
+
+<h3>
+The Way Fear Uses Words to Undo What God Has Spoken
+</h3>
+
+</div>
+
+<p>
+Fear rehearses defeat while faith speaks agreement with God.
+</p>
+
+</a>
+
+<a href="chapter-3.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 3
+</div>
+
+<h3>
+When Fear Wears the Mask of Love
+</h3>
+
+</div>
+
+<p>
+Fear claims protection while quietly reducing intimacy.
+</p>
+
+</a>
+
+<a href="chapter-4.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 4
+</div>
+
+<h3>
+Correction Without Condemnation
+</h3>
+
+</div>
+
+<p>
+Jesus corrects from presence, not rejection.
+</p>
+
+</a>
+
+<a href="chapter-5.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 5
+</div>
+
+<h3>
+Storm Focus or Savior Focus
+</h3>
+
+</div>
+
+<p>
+Peace flows from focus, not from the absence of waves.
+</p>
+
+</a>
+
+<a href="chapter-6.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 6
+</div>
+
+<h3>
+Living From a Sound Mind Instead of a Fear Driven Mind
+</h3>
+
+</div>
+
+<p>
+Truth gains authority when fear loses agreement.
+</p>
+
+</a>
+
+<a href="chapter-7.html" class="chapter-card">
+
+<div>
+
+<div class="chapter-number">
+Chapter 7
+</div>
+
+<h3>
+Standing in What God Has Already Given
+</h3>
+
+</div>
+
+<p>
+Fear asks for more reassurance while faith stands in what Jesus already gave.
+</p>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote-section">
+
+<div class="quote-content">
+
+<h2>
+Fear may speak.<br>
+Jesus has the final word.
+</h2>
+
+<p>
+Living from power, love, and a sound mind through the finished work of Jesus Christ.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-quote">
+Fear Is Not Your Voice
+</div>
+
+<div class="footer-copy">
+© Bradley Hobbs
+</div>
+
+</footer>
+
+</body>
+</html>
